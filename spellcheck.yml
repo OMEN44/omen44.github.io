@@ -2,12 +2,5 @@ matrix:
   - name: Markdown
     aspell:
       lang: en
-    pipeline:
-      - pyspelling.filters.html:
-          comments: false
-          ignores:
-            - code
-            - pre
-            - blockquote
     sources:
       - "**/*.md"

@@ -26,11 +26,8 @@ jobs:
     steps:
       # checkout repo
       - uses: actions/checkout@v7
-      - name: md-spellcheck-action
-        uses: matheus23/md-spellcheck-action@v4.2.2
-        with:
-          files-to-check: "**.md"
-          words-to-ignore-file: ./words-to-ignore.txt
+      - name: Check Spelling
+        uses: check-spelling/check-spelling@v0.0.26
 
       - uses: cachix/install-nix-action@v31.10.6
       - uses: cachix/cachix-action@v17

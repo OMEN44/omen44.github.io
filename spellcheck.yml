@@ -1,0 +1,21 @@
+matrix:
+  - name: Markdown
+    aspell:
+      lang: en
+    dictionary:
+      wordlists:
+        - .wordlist.txt
+      output: .wordlist.dic
+    pipeline:
+      - pyspelling.filters.markdown:
+          markdown_extensions:
+            - markdown.extensions.extra:
+            - pymdownx.superfences:
+      - pyspelling.filters.html:
+          comments: false
+          ignores:
+            - code
+            - pre
+            - blockquote
+    sources:
+      - "**/*.md"

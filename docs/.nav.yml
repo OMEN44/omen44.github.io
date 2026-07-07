@@ -11,7 +11,4 @@ sort:
 
 # The nav section is the main purpose of this plugin. We do not use it since in favour
 # of ordering files manually and setting titles so the file structure reflects what is rendered.
-nav:
-  - Home: 01-home
-  - Perseus V3: 02-perseus-v3
-  - Archive: 03-archive
+# nav:

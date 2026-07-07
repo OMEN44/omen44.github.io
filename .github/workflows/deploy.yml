@@ -1,4 +1,4 @@
-name: "Deploy ducumentation website"
+name: "Deploy documentation website"
 on:
   # Run on push to the main branch and when manually triggered from the Actions tab
   push:
@@ -26,6 +26,11 @@ jobs:
     steps:
       # checkout repo
       - uses: actions/checkout@v7
+      - name: md-spellcheck-action
+        uses: matheus23/md-spellcheck-action@v4.2.2
+        with:
+          files-to-check: "*.md"
+          words-to-ignore-file: ./words-to-ignore.txt
 
       - uses: cachix/install-nix-action@v31.10.6
       - uses: cachix/cachix-action@v17

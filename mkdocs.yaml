@@ -43,7 +43,7 @@ theme:
     text: Roboto
     code: Roboto Mono
 extra:
-  homepage: /01-home
+  homepage: /01-home/index.md
   social:
     - icon: simple/github
       link: https://github.com/ROAR-QUTRC

@@ -26,8 +26,14 @@ jobs:
     steps:
       # checkout repo
       - uses: actions/checkout@v7
-      - name: Check Spelling
-        uses: check-spelling/check-spelling@v0.0.26
+      - name: Spell Check Repo
+        uses: crate-ci/typos@v1.48.0
+        with:
+          files: |
+            **/*.md
+            **/*.yml
+            **/*.yaml
+          write_changes: true
 
       - uses: cachix/install-nix-action@v31.10.6
       - uses: cachix/cachix-action@v17
